@@ -9,5 +9,5 @@ duty_cycle=${3}
 [ $# -lt 3 ] && echo "usage: ${0} IP controller duty_cycle [username] [passwd]" && exit 1
 
 CMD_PREFIX="ipmitool -H ${IP} -U ${USER} -P ${PASSWD} raw "
-echo "IP:${1} controller:${controller duty_cycle:${duty_cycle}} "
+##echo "IP:${1} controller:${controller duty_cycle:${duty_cycle}} "
 ${CMD_PREFIX} 0x30 0x91 0x5c 0x03 0x1${controller} 0x${duty_cycle}
